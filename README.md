@@ -6,7 +6,7 @@ Bill Wang,
 </p>
 
 <p align="center">
-Insert Name,
+Andrew Vela,
 </p>
 
 <p align="center">
