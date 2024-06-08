@@ -21,6 +21,8 @@ Insert Name,
 
 ### Data Source
 
+### About the Data
+
 ### EDA
 
 ## Predictive Model
