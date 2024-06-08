@@ -26,3 +26,7 @@ Insert Name,
 ### EDA
 
 ## Predictive Model
+
+### Naive Bayes
+
+### Logestic Regression
