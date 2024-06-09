@@ -23,11 +23,37 @@ Since the start of the new millennium, the use of social media has continued to 
 
 ## Introduction
 
+In recent years, the rise of social media platforms has revolutionized the way people communicate, providing an unprecedented level of freedom in expressing thoughts and emotions. However, this freedom has also led to the increased use of offensive language online, including curse words and slurs, which can vary significantly in severity and context. The pervasive use of such language poses challenges for maintaining respectful and safe online communities. To address these challenges, this research project aims to analyze the structural features of swear words and develop a model for efficient content filtering.
+
 ## About the Data
 
 ### Data Source
+The data for this research project is sourced from the ["Collection of Profanities in English"](https://www.kaggle.com/datasets/konradb/profanities-in-english-collection) available on Kaggle. This dataset includes a wide range of English profanity words categorized by severity and type. The dataset aims to support the development of content moderation tools by providing a comprehensive list of offensive language.
 
 ### About the Data
+This dataset contains over 1600 popular English profanities and their variations. The columns in the dataset include:
+
+- text: The profanity word or phrase
+- canonical_form_1: The primary canonical form of the profanity.
+- canonical_form_2: An additional canonical form, if applicable.
+- canonical_form_3: Another additional canonical form, if applicable.
+- category_1: The profanity's primary category.
+- category_2: The profanity's secondary category, if applicable.
+- category_3: The profanity's tertiary category, if applicable.
+- severity_rating: The average severity rating of the profanity, based on a scale from 1 to 3.
+- severity_description: The description of the severity rating, rounded to the nearest integer and categorized as Mild (1), Strong (2), or Severe (3).
+
+The profanities are organized into several categories to help understand their context and usage. These categories include:
+- Sexual Anatomy / Sexual Acts
+- Bodily Fluids / Excrement
+- Sexual Orientation / Gender
+- Racial / Ethnic Slurs
+- Mental Disability
+- Physical Disability
+- Physical Attributes
+- Religious Offense
+- Political
+- Other / General Insult
 
 ### EDA
 
@@ -182,7 +208,7 @@ Upon fitting the logestic regression model, the model came to be about a 83% acc
 
 It seems that the NaN values have not changed suggesting again that the predictions between these classes don't have enough data. However, looking the classes that are non NAN, other than `physical attributes`, the curves show a large AUC, suggesting strong discrimination between classes. 
 
-### Conclusion
+### Conclusion 
 
 All in all, it seems that the one-vs-rest logestic regression classifier exceeded the Naive Bayes with classes with sufficient data. If you recall from *Figure 3*, the swear words are a majority in the class `sexual_anatomy / sexual acts` (980/ 1598 = 61%) while the top 5 categories consist of 1552/1598 = 97%. Thus, if we want a stronger prediction for the rest of the classes, we should get more data on those classes. 
 
