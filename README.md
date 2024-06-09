@@ -87,7 +87,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 4: Box Plot 1**
-	</p> Data Analysis:
+	</p> Data Analysis: This Box Plot indicates how for a category like "racial / ethnic slurs", it's almost exclusively involved words that reached the highest severity ratings as the median here is 2.75 but given the many outliers as a result, the median is much higher than the average as a result. "Sexual Orientation / Gender" and "Sexual Anatomy / Sexual Acts" both have similar values but while words falling into sexual orientation have a larger box plot than those revolving around sexual anatomy, the sexual anatomy category has a higher median. "Bodily Fluids / Excrement" stands out here as much less severe on average as the whole box plot is less than the average severity score, with only a few outliers being given a two in this category
 </p>
 
 <p align="center">
