@@ -62,10 +62,10 @@ Since the start of the new millennium, the use of social media has continued to 
 
 Naive Bayes classifiers are based on Bayes' theorem with the assumption of conditional independence between every pair of features given the value of the class variable. This assumption simplifies the computation and is given by:
 
-$$ P(C \mid X) = \frac{P(C) \cdot P(X \mid C)}{P(X)} $$
+$$P(C \mid X) = \frac{P(C) \cdot P(X \mid C)}{P(X)}$$
 
 
-In practice, we aim to maximize the posterior probability $ P(C \mid X) $, and we often drop $ P(X) $ as it is constant for all classes.
+In practice, we aim to maximize the posterior probability $P(C \mid X)$, and we often drop $P(X)$ as it is constant for all classes.
 
 ### Model Diagnostics
 
