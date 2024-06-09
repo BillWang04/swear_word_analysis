@@ -90,6 +90,15 @@ Since the start of the new millennium, the use of social media has continued to 
 </p>
 
 
+<p align="center">
+<img src = "imgs/eda/fws.png">
+
+<p align="center">
+**Figure 7: Frequency of Swear Words per Severity**
+	</p>
+</p>
+
+
 
 # Predictive Model
 
