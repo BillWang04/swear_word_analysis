@@ -184,8 +184,26 @@ It seems that the NaN values have not changed suggesting again that the predicti
 
 ### Conclusion
 
-All in all, it seems that the one-vs-rest logestic regression classifier exceeded the Naive Bayes with classes with sufficient data. If you recall from *Figure 3*, the swear words are a majority in the class `sexual_anatomy / sexual acts` (980/ 1598 = 61%) while the top 5 categories consist of 1552/1598 = 97%. Thus, if we want a stronger prediction for the rest of the classes, we should get more data on those classes. 
+The Naive Bayes and Logistic Regression classifiers were compared to evaluate their performance on a multiclass classification task involving offensive content categorization. Each model's strengths and weaknesses were analyzed based on key metrics such as accuracy, confusion matrix, precision-recall curves, and One-vs-Rest ROC curves.
 
+#### Naive Bayes Classifier
+The Naive Bayes classifier, with its assumption of conditional independence, achieved an accuracy of around 74%. This model demonstrated strong performance in detecting certain categories like `religious offense`, `sexual anatomy / sexual acts`, and `racial / ethnic slurs`, as indicated by their robust precision-recall curves and high ROC AUC values. However, it struggled with categories such as `physical attributes`, `general insults`, and `political` references, often resulting in poor or even missing predictions for these classes. The variability in performance across different categories highlights the limitations of the Naive Bayes approach, particularly in handling the nuances of diverse and imbalanced data sets.
+
+#### Logistic Regression Classifier
+Similarly, the Logistic Regression classifier, using the One-vs-Rest (OvR) strategy, achieved a higher accuracy of 83%. This model showed improved precision-recall and ROC performance for the categories that already performed well under Naive Bayes, such as `religious offenses` and `sexual anatomy / sexual acts`. The AUC values for these categories were notably higher, indicating better discriminative power. However, similar to Naive Bayes, the Logistic Regression classifier also faced challenges with less represented categories like `physical attributes` and `general insults`, reflecting the need for more data to improve prediction accuracy for these classes.
+
+#### Comparative Analysis
+The Logistic Regression classifier generally outperformed the Naive Bayes model, particularly for well-represented classes. The ROC curves for Logistic Regression indicated stronger discriminative ability for most categories. However, both models exhibited limitations with poorly represented classes, which suggests that the primary issue is the imbalance and scarcity of data in these categories rather than the choice of the classifier.
+
+### Recommendations
+To enhance the performance of both classifiers, especially for underrepresented categories, the following steps are recommended:
+1. **Data Augmentation:** Collect more data for the poorly performing categories to ensure a balanced representation.
+2. **Feature Engineering:** Explore advanced feature engineering techniques to better capture the nuances of the text data.
+3. **Hybrid Models:** Consider using ensemble methods that combine the strengths of different classifiers to improve overall performance.
+4. **Regularization Techniques:** Apply regularization methods to handle data imbalance and prevent overfitting, particularly for Logistic Regression.
+
+### Final Thoughts
+The comparison underscores the importance of data quality and quantity in training robust classification models. While the Logistic Regression classifier showed superior performance overall, both models' effectiveness is contingent upon addressing data imbalances. Future efforts should focus on enriching the dataset and exploring hybrid modeling approaches to achieve more consistent and reliable classification across all categories.
 
 
 
