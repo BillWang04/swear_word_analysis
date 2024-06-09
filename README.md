@@ -119,7 +119,7 @@ The profanities are organized into several categories to help understand their c
 <img src = "imgs/eda/fws.png">
 
 <p align="center">
-**Figure 7: Frequency of Swear Words per Severity**
+**Figure 8: Frequency of Swear Words per Severity**
 	</p>
 </p>
 
