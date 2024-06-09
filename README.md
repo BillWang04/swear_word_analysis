@@ -61,7 +61,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 1:Most Common Swear Words**
-In this graph
+	Ib this graph, 
 	</p>
 </p>
 
