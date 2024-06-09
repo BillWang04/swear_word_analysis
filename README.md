@@ -13,11 +13,13 @@ Andrew Vela,
 Songjiang Zhou,
 </p>
 
-# Fair Warning, the following data project does contain the use of swear words and other ofensive slurs as a part of the data.  
+# Fair Warning, the following data project does contain the use of swear words and other offensive slurs as a part of the data.  
 
 ## Abstract
 
 Since the start of the new millennium, the use of social media has continued to grow at an increasing rate as people have found themselves with the capabilities to express themselves online in a way that allows expressing their feelings to others without having to feel confined to a social setting where it can feel restrictive to what they can say. As this increasing use of social media has followed for many years, it has also come with many people being able to express things with curse words and slurs that vary in degrees of severity and range in different categories as to what they mean by these words. With the use of data sets found on popular data websites, we were able to find that there many times, the inflammatory words used online were meant to be in a way that described anatomy. We also gathered that the more common words by themselves were often slurs or common curse words said even in a social setting. Inside this data, we also were able to determine that more often than not, these inflammatory words reach a rating that would be deemed as 'strong', which was our highest severity ratings category used to judge these words. This project argues that the increasing use of social media has allowed people not only to express themselves online but also be much more severe in their word usage without the constant pressure of social setting standards, often use these words to express a manner that is seen as more sexual demeanor as their common reason.    
+
+**TALK ABOUT THE CLASSIFICATION OF SWEAR WORDS TO CATEGORIES AND HOW THATS IMPORTANT (This is the main part of analysis in code)**
 
 ## Introduction
 
@@ -29,9 +31,9 @@ Since the start of the new millennium, the use of social media has continued to 
 
 ### EDA
 
-## Predictive Model
+# Predictive Model
 
-### Preprocessing
+## Preprocessing
 
 1. **Data Preparation**: The dataset consists of texts of swear words, severity ratings, and a binary indicator for profanity hardness. 
 
@@ -46,9 +48,10 @@ Since the start of the new millennium, the use of social media has continued to 
 5. **Concatenation**: Extracted n-gram features, severity ratings, and hardness indicators are concatenated to form the final feature matrices for training and testing.
 
 
-### Naive Bayes Model Report
 
-#### Assumptions
+## Naive Bayes Model Report
+
+### Assumptions
 Naive Bayes classifiers are based on Bayes' theorem with the assumption of conditional independence between every pair of features given the value of the class variable. This assumption simplifies the computation and is given by:
 
 $$ P(C \mid X) = \frac{P(C) \cdot P(X \mid C)}{P(X)} $$
@@ -56,18 +59,18 @@ $$ P(C \mid X) = \frac{P(C) \cdot P(X \mid C)}{P(X)} $$
 
 In practice, we aim to maximize the posterior probability $ P(C \mid X) $, and we often drop $ P(X) $ as it is constant for all classes.
 
-#### Model Diagnostics
+### Model Diagnostics
 
 The Naive Bayes classifier achieved an accuracy of around 74%. Below are the detailed diagnostics including the confusion matrix, precision-recall curves, and One-vs-Rest multiclass ROC.
 
-#### Confusion Matrix
+### Confusion Matrix
 The confusion matrix shows the performance of the classification model on a set of test data for which the true values are known. The matrix illustrates the number of correct and incorrect predictions made by the model compared to the actual classifications in the test data.
 
 ![Confusion Matrix](imgs/classifier/naive_bayes_cm.png)
 
-As you can see, because most of the data is categorized as `sexual anatomy/sexual acts`, we can see that most predictions are of the 
+Because this a multiclass classifier, it is hard to purely disect the recall and percision of the classifier, and thus we must plot it.
 
-#### Precision-Recall Curve
+### Precision-Recall Curve
 The precision-recall curve is a plot of the precision (y-axis) versus the recall (x-axis) for a classifier at different threshold settings. It is useful for evaluating models when the classes are imbalanced.
 
 ![Precision-Recall Curve](imgs/classifier/naive_bayes_prc.png)
@@ -75,7 +78,7 @@ The precision-recall curve is a plot of the precision (y-axis) versus the recall
 
 As one can see, there is wide variety of percision/recall strength when looking at the curve. Categories such as `religious offence`, `sexual_anatomy / sexual acts`, `racial / ethnic slurs`, and `sexual orientation / gender` perfrom reasonably well by maintaing a wide range of recall values, indicating that the model is effective in detecting these categories. However, categories of `bodily fluids / excrement`, `mental disability`, and `physical attributes` had moderate performance and `animal references`, `other / general insult`, `physical disability`, and `political` were poor or even missing from the graph. The missigness is a sign that there were no values that were predicted from that class, so there was no way to plot the Precision vs. Recall Curve
 
-#### One-vs-Rest multiclass ROC
+### One-vs-Rest multiclass ROC
 The ROC curve, or Receiver Operating Characteristic curve, is a graphical representation of the true positive rate (TPR) versus the false positive rate (FPR) at various threshold settings. The area under the curve (AUC) is used as a measure of the model’s ability to distinguish between classes. An AUC of 1 indicates a perfect model, while an AUC of 0.5 suggests no discriminative ability. In this case, because we are multi-classed, we will use the One-vs-Rest multiclass ROC. In each step, a given class is regarded as the positive class and the remaining classes are regarded as the negative class as a bulk.
 
 ![ROC Curve](imgs/classifier/naive_bayes_roc.png)
@@ -91,8 +94,28 @@ Overall, the Naive Bayes classifier performed reasonably well, especially given 
 
 
 
-### Logestic Regression
+## Logestic Regression
 
-#### Assumptions
+After the perforance of Naive Bayes having the assumption of independence of each feature, we decided to use a different model, logestic regression.
 
-#### Model Diagonistics
+### Assumptions
+
+In the context of multiclass classification, logistic regression can be extended using the one-vs-rest (OvR) strategy. This approach involves breaking down a multiclass classification problem into multiple binary classification problems.
+
+
+### Model Diagonistics
+
+### Confusion Matrix and Precision-Recall Curve
+![Confusion Matrix](imgs/classifier/lr_cm.png)
+
+
+![Precision-Recall Curve](imgs/classifier/lr_prc.png)
+
+As you can see, the Precision vs. Recall curve shows much better fit 
+
+### One-vs-Rest multiclass ROC
+
+![ROC Curve](imgs/classifier/lr_roc.png)
+
+
+
