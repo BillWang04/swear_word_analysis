@@ -69,7 +69,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 2: Histogram Category Frequency**
-	</p> Data Analysis: The chart shows that insults targeting race, physical disability, and political affiliations are perceived as the most severe, being the ones well above the mean of the overall data, hanging at around a 2.5 average severity rating. In contrast, insults involving animal references and physical attributes are perceived as the least severe as they almost average a severity rating of 1.
+	</p> Data Analysis: The histogram shows that insults targeting race, physical disability, and political affiliations are perceived as the most severe, being the ones well above the mean of the overall data, hanging at around a 2.5 average severity rating. In contrast, insults involving animal references and physical attributes are perceived as the least severe as they almost average a severity rating of 1.
 </p>
 
 
@@ -78,7 +78,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 3: Histogram Category Frequency**
-	</p> Data Analysis: 
+	</p> Data Analysis: This histogram indicates that almost all of the usage of informatory words fall into the category "sexual anatomy / sexual acts" as it reaches a peak of almost 1000 mentions. The next highest categories "racial / ethnic slurs", "sexual orientation / gender" and "bodily fluids / excrement" reached only about 200 mentions, with the rest categories barely showing a mark on the graph.  
 </p>
 
 
