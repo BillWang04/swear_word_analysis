@@ -69,7 +69,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 2: Histogram Category Frequency**
-	</p>
+	</p> Data Analysis: The chart shows that insults targeting race, physical disability, and political affiliations are perceived as the most severe, being the ones well above the mean of the overall data, hanging at around a 2.5 average severity rating. In contrast, insults involving animal references and physical attributes are perceived as the least severe as they almost average a severity rating of 1.
 </p>
 
 
@@ -78,7 +78,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 3: Histogram Category Frequency**
-	</p>
+	</p> Data Analysis: 
 </p>
 
 
@@ -87,7 +87,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 4: Box Plot 1**
-	</p>
+	</p> Data Analysis:
 </p>
 
 <p align="center">
@@ -95,7 +95,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 5: Box Plot 2**
-	</p>
+	</p> Data Analysis:
 </p>
 
 <p align="center">
@@ -103,7 +103,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 6: Box Plot 3**
-	</p>
+	</p> Data Analysis:
 </p>
 
 <p align="center">
@@ -111,7 +111,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 7: Frequency of the Length of Swear Words**
-	</p>
+	</p> Data Analysis:
 </p>
 
 
@@ -120,7 +120,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 8: Frequency of Swear Words per Severity**
-	</p>
+	</p> Data Analysis:
 </p>
 
 
