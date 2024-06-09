@@ -65,8 +65,6 @@ The profanities are organized into several categories to help understand their c
 </p>
 
 
-
-
 <img src = "imgs/eda/avg_severity_rating.png">
 
 <p align="center">
