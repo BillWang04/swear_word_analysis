@@ -95,7 +95,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 5: Box Plot 2**
-	</p> Data Analysis:
+	</p> Data Analysis: The category "Animal References" have the lowest and least variable severity ratings, indicating they are generally viewed as less offensive given the few data points show all but one being on the lower ends of the severe ratings. The "Political" category also has a small subset of a few data points indicating the opposite with a much more severe rating with a much higher median than the rest of the categories on this chart. "Other / General Insult" and "Mental Disability" have a similar box plot coverage that almost covers a large part of the possible data points resulting in neither having any outliers, as both widely range in values, although general insults come out to have a lower median overall than mental disability's median.
 </p>
 
 <p align="center">
@@ -103,7 +103,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 6: Box Plot 3**
-	</p> Data Analysis:
+	</p> Data Analysis: Given "Physical Disability" category only has one data point that is 2.6, it's not enough to have a box plot for the category but it could lead to a higher median if more data would be found for uses of insults revolving that category. "Physical Attributes" and "Religious Offense" both have similar median but religious offenses have a wider range of values that do mostly stay below average, although there are some that aren't outliers but reach slightly above average. In comparison, insults to physical attributes, with much less data than religious offenses, are on just about the lower end of the severity ratings.
 </p>
 
 <p align="center">
@@ -111,7 +111,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 7: Frequency of the Length of Swear Words**
-	</p> Data Analysis:
+	</p> Data Analysis: The frequency data above follows roughly what a normal distribution graph would look like with the data points ranging from 0 to about 18. There's a little of a left-tailed in this graph, with an emphasis on the values lower than 7.5 as there's a small jump at the end of the data point of 17.5, showing that the outliers would likely be values that are close to the maximum as opposed to the minimum length.
 </p>
 
 
@@ -120,7 +120,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 8: Frequency of Swear Words per Severity**
-	</p> Data Analysis:
+	</p> Data Analysis: The 3 categories of the severity ratings "Severe", "Mild", and "Strong" have hundreds of words that fall into each category, although it's a much more noticeable jump from the first two categories to the "Strong" category. The data here also indicates that more words fall around the average severity ratings, with slightly more words falling above average given more words are in the "Severe" category than the "Mild" category.
 </p>
 
 
