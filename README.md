@@ -31,6 +31,15 @@ Since the start of the new millennium, the use of social media has continued to 
 
 ### EDA
 
+<p align="center">
+<img src = "imgs/eda/frequency_of_each_category.png">
+
+<p align="center">
+**Figure 3: Histogram Category Frequency**
+	</p>
+</p>
+
+
 # Predictive Model
 
 ## Preprocessing
@@ -51,7 +60,6 @@ Since the start of the new millennium, the use of social media has continued to 
 
 ## Naive Bayes Model Report
 
-### Assumptions
 Naive Bayes classifiers are based on Bayes' theorem with the assumption of conditional independence between every pair of features given the value of the class variable. This assumption simplifies the computation and is given by:
 
 $$ P(C \mid X) = \frac{P(C) \cdot P(X \mid C)}{P(X)} $$
@@ -96,12 +104,7 @@ Overall, the Naive Bayes classifier performed reasonably well, especially given 
 
 ## Logestic Regression
 
-After the perforance of Naive Bayes having the assumption of independence of each feature, we decided to use a different model, logestic regression.
-
-### Assumptions
-
-In the context of multiclass classification, logistic regression can be extended using the one-vs-rest (OvR) strategy. This approach involves breaking down a multiclass classification problem into multiple binary classification problems.
-
+After the perforance of Naive Bayes having the assumption of independence of each feature, we decided to use a different model, logestic regression. In the context of multiclass classification, logistic regression can be extended using the one-vs-rest (OvR) strategy. This approach involves breaking down a multiclass classification problem into multiple binary classification problems.
 
 ### Model Diagonistics
 
@@ -111,11 +114,24 @@ In the context of multiclass classification, logistic regression can be extended
 
 ![Precision-Recall Curve](imgs/classifier/lr_prc.png)
 
-As you can see, the Precision vs. Recall curve shows much better fit 
+Upon fitting the logestic regression model, the model came to be about a 83% accuracy. As you can see from the Precision vs. Recall curve,  there seems to show much better fit for classes that already performing fairly well in the Naive Bayes Model. For instance, `Religious Offenses` has a perfect 1 to 1 precision vs recall curve (). However, the increased metrics of the classes that already faired well does not seem to have increased the classes that were doing poorly. This is probably because there is not enough data for those classes.
 
 ### One-vs-Rest multiclass ROC
 
 ![ROC Curve](imgs/classifier/lr_roc.png)
+
+It seems that the NaN values have not changed suggesting again that the predictions between these classes don't have enough data. However, looking the classes that are non NAN, other than `physical attributes`, the curves show a large AUC, suggesting strong discrimination between classes. 
+
+### Conclusion
+
+All in all, it seems that the one-vs-rest logestic regression classifier exceeded the Naive Bayes with classes with sufficient data. If you recall from *Figure 3*, the swear words are a majority in the class `sexual_anatomy / sexual acts` (980/ 1598 = 61%) while the top 5 categories consist of 1552/1598 = 97%. Thus, if we want a stronger prediction for the rest of the classes, we should get more data on those classes.
+
+
+
+
+
+
+
 
 
 
