@@ -123,7 +123,14 @@ The profanities are organized into several categories to help understand their c
 	</p> Data Analysis: The 3 categories of the severity ratings "Severe", "Mild", and "Strong" have hundreds of words that fall into each category, although it's a much more noticeable jump from the first two categories to the "Strong" category. The data here also indicates that more words fall around the average severity ratings, with slightly more words falling above average given more words are in the "Severe" category than the "Mild" category.
 </p>
 
+### Summary
 
+- The most common swear words exhibit a steep drop-off in frequency after the top few terms.
+- Insults targeting race, physical disability, and political affiliations are perceived as most severe.
+- The "sexual anatomy / sexual acts" category is overwhelmingly the most frequent.
+- Categories like "racial / ethnic slurs" and "political" have high severity, while "animal references" are least severe.
+- Swear word lengths mostly fall within a normal distribution, skewing slightly towards shorter words.
+- There is a higher frequency of words rated as "Severe", suggesting a greater emphasis on highly offensive terms.
 
 # Predictive Model
 
