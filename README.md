@@ -31,6 +31,23 @@ Since the start of the new millennium, the use of social media has continued to 
 
 ### EDA
 
+
+<img src = "imgs/eda/most_common_swear_words.png">
+
+<p align="center">
+**Figure 1:Most Common Swear Words**
+	</p>
+</p>
+
+
+<img src = "imgs/eda/avg_severity_rating.png">
+
+<p align="center">
+**Figure 2: Histogram Category Frequency**
+	</p>
+</p>
+
+
 <p align="center">
 <img src = "imgs/eda/frequency_of_each_category.png">
 
@@ -38,6 +55,40 @@ Since the start of the new millennium, the use of social media has continued to 
 **Figure 3: Histogram Category Frequency**
 	</p>
 </p>
+
+
+<p align="center">
+<img src = "imgs/eda/box_plot1.png">
+
+<p align="center">
+**Figure 4: Box Plot 1**
+	</p>
+</p>
+
+<p align="center">
+<img src = "imgs/eda/box_plot2.png">
+
+<p align="center">
+**Figure 5: Box Plot 2**
+	</p>
+</p>
+
+<p align="center">
+<img src = "imgs/eda/box_plot3.png">
+
+<p align="center">
+**Figure 6: Box Plot 3**
+	</p>
+</p>
+
+<p align="center">
+<img src = "imgs/eda/frequency_length_swear_words.png">
+
+<p align="center">
+**Figure 7: Frequency of the Length of Swear Words**
+	</p>
+</p>
+
 
 
 # Predictive Model
@@ -50,7 +101,7 @@ Since the start of the new millennium, the use of social media has continued to 
 
 3. **Feature Engineering**:
     - **N-gram Features**: N-grams are sequences of n items from the text. Bi-grams and tri-grams are extracted from the text samples, counting their occurrences to construct feature vectors.
-    - **Severity Rating and Hardness Indicator**: Additional features include severity ratings and a binary indicator for profanity hardness.
+    - **Severity Rating and Hardness Indicator**: Additional features include severity ratings and a binary indicator for profanity that end with a hard consenants.
 
 4. **Label Binarization**: The target variable (profanity categories) is binarized to convert categorical labels into a binary matrix representation for later representation in Receiver Operating Characteristic (ROC) curve and Precision vs Recall Curve.
 
@@ -124,7 +175,10 @@ It seems that the NaN values have not changed suggesting again that the predicti
 
 ### Conclusion
 
-All in all, it seems that the one-vs-rest logestic regression classifier exceeded the Naive Bayes with classes with sufficient data. If you recall from *Figure 3*, the swear words are a majority in the class `sexual_anatomy / sexual acts` (980/ 1598 = 61%) while the top 5 categories consist of 1552/1598 = 97%. Thus, if we want a stronger prediction for the rest of the classes, we should get more data on those classes.
+All in all, it seems that the one-vs-rest logestic regression classifier exceeded the Naive Bayes with classes with sufficient data. If you recall from *Figure 3*, the swear words are a majority in the class `sexual_anatomy / sexual acts` (980/ 1598 = 61%) while the top 5 categories consist of 1552/1598 = 97%. Thus, if we want a stronger prediction for the rest of the classes, we should get more data on those classes. 
+
+
+
 
 
 
