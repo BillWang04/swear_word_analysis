@@ -56,6 +56,18 @@ The profanities are organized into several categories to help understand their c
 
 ### EDA
 
+In this Exploratory Data Analysis (EDA), we examined the distribution and severity of various offensive terms across multiple categories. Our goal was to understand the frequency and perceived severity of different types of offensive language. The analysis includes visualizations such as bar charts, histograms, and box plots to provide insights into the data.
+
+**Key objectives of the EDA:#**
+
+- Identify the most common swear words.
+- Assess the average severity ratings of offensive terms by category.
+- Examine the frequency distribution of categories.
+- Analyze the distribution of severity ratings within each category.
+- Understand the length distribution of swear words.
+- Evaluate the frequency of swear words based on their severity ratings.
+- The findings from the EDA will help us to better understand the data distribution and inform the development and evaluation of classification models.
+
 
 <img src = "imgs/eda/most_common_swear_words.png">
 
@@ -123,6 +135,22 @@ The profanities are organized into several categories to help understand their c
 	</p> Data Analysis: The 3 categories of the severity ratings "Severe", "Mild", and "Strong" have hundreds of words that fall into each category, although it's a much more noticeable jump from the first two categories to the "Strong" category. The data here also indicates that more words fall around the average severity ratings, with slightly more words falling above average given more words are in the "Severe" category than the "Mild" category.
 </p>
 
+<p align="center">
+<img src = "imgs/eda/hard_bar.png">
+
+<p align="center">
+**Figure 9: Frequency of Swear Words per Severity**
+
+</p>
+
+The bar chart shows the proportion of hard consonants at the end of offensive words across different categories. The hard_or_not axis indicates the frequency of hard consonants, while category_1 represents various categories of offensive terms. 
+
+Categories like "mental disability," "physical attributes," and "religious offense" have the highest proportion of hard consonants, suggesting that the harshness of sound might contribute significantly to their offensive nature.
+Categories such as "political," "physical disability," and "animal references" have the lowest proportions, indicating that these terms might rely more on their context or content rather than sound to convey offensiveness.
+The presence of hard consonants varies significantly across categories, reflecting differences in how offensiveness is expressed and perceived in language.
+
+
+
 ### Summary
 
 - The most common swear words exhibit a steep drop-off in frequency after the top few terms.
@@ -131,8 +159,18 @@ The profanities are organized into several categories to help understand their c
 - Categories like "racial / ethnic slurs" and "political" have high severity, while "animal references" are least severe.
 - Swear word lengths mostly fall within a normal distribution, skewing slightly towards shorter words.
 - There is a higher frequency of words rated as "Severe", suggesting a greater emphasis on highly offensive terms.
+- Some categories exhibit higher proportion of hard consonants 
+
+
+
+
+
 
 # Predictive Model
+
+Given our exploratory data analysis (EDA), we decided to create a predictive model to classify offensive language into various categories based on their severity and specific characteristics.
+
+In this section, we explore the development and evaluation of predictive models to classify offensive content. Our aim is to leverage the insights gained from the EDA to construct robust classifiers capable of distinguishing between different categories of offensive language. By implementing and comparing different machine learning algorithms, we seek to identify the model that provides the highest accuracy and best overall performance.
 
 ## Preprocessing
 
@@ -142,6 +180,7 @@ The profanities are organized into several categories to help understand their c
 
 3. **Feature Engineering**:
     - **N-gram Features**: N-grams are sequences of n items from the text. Bi-grams and tri-grams are extracted from the text samples, counting their occurrences to construct feature vectors.
+	- 
     - **Severity Rating and Hardness Indicator**: Additional features include severity ratings and a binary indicator for profanity that end with a hard consenants.
 
 4. **Label Binarization**: The target variable (profanity categories) is binarized to convert categorical labels into a binary matrix representation for later representation in Receiver Operating Characteristic (ROC) curve and Precision vs Recall Curve.
