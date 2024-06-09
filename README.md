@@ -61,7 +61,7 @@ The profanities are organized into several categories to help understand their c
 
 <p align="center">
 **Figure 1:Most Common Swear Words**
-	</p> This data from this graph indicates how "Fuck" is by far the most commonly used inflammatory word documented as the following words like "motherfucker" and "shit" follow next, with this graph looking similarly to an exponential decay graph.
+	</p> About This Graph: This data from this graph indicates how "Fuck" is by far the most commonly used inflammatory word documented as the following words like "motherfucker" and "shit" follow next, with this graph looking similar to an exponential decay graph.
 </p>
 
 
